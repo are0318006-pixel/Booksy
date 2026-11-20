@@ -1,8 +1,3 @@
-docker compose up -d --waint
-
-npm run migrate 
-npm run seed
-npm run dev
 # Docker Compose describe los servicios del proyecto. Comandos más usados:
 #
 #   docker compose up -d                       levanta solo PostgreSQL (lo normal al programar)
@@ -13,6 +8,7 @@ npm run dev
 #   docker compose down                        apaga todo (tus datos se conservan)
 #   docker compose down -v                     apaga todo y BORRA los datos
 #
+# Antes de iniciar la aplicación: docker compose up -d, luego npm run migrate, npm run seed y npm run dev.
 # El tutorial completo está en el repositorio del curso: tutoriales/04-docker.md
 
 name: mi-producto
