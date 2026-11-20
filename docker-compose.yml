@@ -11,7 +11,7 @@
 # Antes de iniciar la aplicación: docker compose up -d, luego npm run migrate, npm run seed y npm run dev.
 # El tutorial completo está en el repositorio del curso: tutoriales/04-docker.md
 
-name: mi-producto
+name: Booksy
 
 services:
   db:
