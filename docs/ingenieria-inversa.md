@@ -1,55 +1,70 @@
-# Ingeniería inversa · <Sitio de referencia>
+﻿# Ingenieria Inversa - Booksy
 
-> Historia H1.1. Estudia el sitio con las DevTools del navegador (F12) y documenta al menos
-> 10 hallazgos con capturas. Guarda las capturas en `docs/img/`.
->
-> Reglas: se recrea la experiencia, no la marca. No descargues sus archivos; no recrees
-> pantallas de inicio de sesión ni de pago.
+## 1. Estructura
+- **Hallazgo 1 (Catalogo y organizacion de vistas):**
+ - Evidencia: ![Catalogo y estructura](<capturas/captura 6.jpg>)
 
-## 1. Estructura (pestaña Elements)
+  - Observaciones: Se muestran servicios agrupados con duración en minutos, precios y opciones para agendar o filtrar.
 
-- ¿Qué etiquetas semánticas usa (`header`, `nav`, `main`, `article`…)? ¿Cuáles faltan?
-- ¿Cómo está organizado el layout (Flexbox, Grid)?
+  - Impacto en Booksy: Estructurar el catálogo mostrando con claridad servicio, duración y precio para calcular franjas horarias y evitar choques de agenda.
 
-## 2. Sistema de diseño (pestaña Elements → Computed)
+- **Hallazgo 2 (Ficha de barberos, blog y pie de pagina):**
+  - Evidencia:![Barberos, blog y footer](<capturas/captura 3.jpg>)
 
-| Elemento | Valor |
-| --- | --- |
-| Color principal | |
-| Color de fondo | |
-| Tipografía de títulos | |
-| Tipografía de texto | |
-| Tamaño base del texto | |
-| Espaciado típico | |
-| Radio de bordes | |
+  - Observaciones: Se muestran servicios agrupados con duración en minutos, precios y opciones para agendar o filtrar.  
 
-## 3. Red (pestaña Network → Fetch/XHR)
+  - Impacto en Booksy: Organizar de forma clara la selección de profesional/disponibilidad y mantener un cierre limpio con información útil del negocio.
 
-- ¿Qué peticiones hace al cargar? ¿A qué URL?
-- ¿Qué formato tienen los datos (JSON)? Pega un ejemplo resumido.
-- ¿Qué pasa en la red cuando filtras o buscas?
+## 2. Sistema de Diseno
+- **Hallazgo 3 (Tipografia y jerarquia visual):**
+  - Evidencia: ![Tipografia y estilos](<capturas/captura 4.jpg>)
+  - Observaciones: Hay una clara diferencia entre encabezados principales, subtítulos/fechas y textos de lectura o enlaces laterales.
 
-## 4. Estado (pestaña Application)
+  - Impacto en Booksy: Definir una escala tipográfica legible en vistas móviles y de escritorio para distinguir rápido nombres de servicios, duraciones y precios.
 
-- ¿Qué guarda en la URL (parámetros)?
-- ¿Qué guarda en cookies y localStorage?
+- **Hallazgo 4 (Colores, espaciado y componentes):**
+  - Evidencia: ![Componentes y CSS](<capturas/captura 1.jpg>)
+  - Observaciones: Se combinan fondos claros con acentos de color en botones y etiquetas, separando bloques con tarjetas y márgenes definidos.
 
-## 5. Rendimiento y accesibilidad (pestaña Lighthouse)
+  - Impacto en Booksy: Mantener componentes consistentes (tarjetas, botones de acción, estados activos y espaciados) para que la reserva se sienta coherente.
 
-| Métrica | Sitio original | Mi versión |
-| --- | --- | --- |
-| Rendimiento | | |
-| Accesibilidad | | |
-| Buenas prácticas | | |
+## 3. Red
+- **Hallazgo 5 (Carga de recursos y peticiones):**
+  - Evidencia: ![Pestana Red](<capturas/captura 2.jpg>)
+  - Observaciones: La cabecera ofrece acceso directo a secciones clave y un botón principal visible desde el primer pantallazo.
 
-## 6. Hallazgos
+  - Impacto en Booksy: Dar acceso rápido al catálogo y al flujo de reserva sin obligar al usuario a buscar entre menús confusos.
 
-| # | Hallazgo | Captura |
-| --- | --- | --- |
-| 1 | | |
+- **Hallazgo 6 (Dependencias y comportamiento en carga):**
+  - Evidencia: ![Detalle de red](<capturas/captura 5.jpg>)
+  - Observaciones: Reúne información contextual del local (ubicación, horario, valoración) junto con los profesionales disponibles.
 
-## 7. Tres mejoras que hice en mi versión (H1.3)
+  - Impacto en Booksy: Vincular claramente el servicio elegido con la disponibilidad del profesional o franja horaria correspondiente.
 
-1.
-2.
-3.
+## 4. Estado
+- **Hallazgo 7 (Interaccion y disponibilidad de turnos):**
+  - Evidencia: ![Estado e interaccion](<capturas/captura 4.jpg>)
+  - Observaciones: Separa el contenido editorial o guías de cuidado en un bloque independiente con listado lateral de entradas recientes.
+
+  - Impacto en Booksy: Mantener enfocado el flujo principal de reserva sin saturarlo con contenido informativo secundario.
+
+- **Hallazgo 8 (Colisiones, vacios y cola FIFO):**
+  - Evidencia: ![Colisiones y cola](<capturas/captura 7.jpg>)
+  - Observaciones: Se cargan imágenes, hojas de estilo y scripts en vista móvil, usando caché en ciertos recursos (slide.webp) y mostrando mensajes en consola.
+
+  - Impacto en Booksy: Cargar solo lo necesario en clon/, evitar errores en consola y lograr que la interfaz responda rápido en pantallas pequeñas.
+
+## 5. Lighthouse
+- **Hallazgo 9 (Puntajes y metricas clave):**
+  - Evidencia: ![Lighthouse metricas](<capturas/captura 9.jpg>)
+  - Observaciones: Se evidencian cuellos de botella en carga inicial, fuentes, entrega de imágenes, caché y redistribuciones de diseño.
+
+  - Impacto en Booksy: Evitar scripts/estilos bloqueantes innecesarios y mantener un diseño estable desde la primera carga.
+
+- **Hallazgo 10 (Oportunidades y diagnosticos):**
+  - Evidencia: ![Lighthouse diagnosticos](<capturas/captura 10.jpg>)
+  - Observaciones: El peso de JavaScript, las tareas largas en el hilo principal y la falta de dimensiones explícitas en imágenes afectan la fluidez.
+
+  - Impacto en Booksy: Escribir JavaScript limpio y modular para clon/, evitando tareas pesadas al calcular horarios o actualizar el estado de la reserva.
+
+
