@@ -61,24 +61,14 @@
 
 ## 5. Lighthouse
 - **Hallazgo 9 (Puntajes y metricas clave):**
-<<<<<<< Updated upstream
   - Evidencia: ![Estado e interaccion](<capturas/captura 9.jpg>)
     
-=======
-  - Evidencia: ![Colisiones y cola](<capturas/captura 9.jpg>)
->>>>>>> Stashed changes
   - Observaciones: Se evidencian cuellos de botella en carga inicial, fuentes, entrega de imágenes, caché y redistribuciones de diseño.
 
   - Impacto en Booksy: Evitar scripts/estilos bloqueantes innecesarios y mantener un diseño estable desde la primera carga.
 
 - **Hallazgo 10 (Oportunidades y diagnosticos):**
-<<<<<<< Updated upstream
-  - Evidencia: ![Estado e interaccion](<capturas/captura 10.jpg>)
-    
-=======
-
   - Evidencia: ![Lighthouse diagnosticos](<capturas/captura 10.jpg>)
->>>>>>> Stashed changes
   - Observaciones: El peso de JavaScript, las tareas largas en el hilo principal y la falta de dimensiones explícitas en imágenes afectan la fluidez.
 
   - Impacto en Booksy: Escribir JavaScript limpio y modular para clon/, evitando tareas pesadas al calcular horarios o actualizar el estado de la reserva.
