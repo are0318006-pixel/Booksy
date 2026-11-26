@@ -8,7 +8,7 @@ Este proyecto usa **screaming architecture** (arquitectura que grita): al abrir 
 > *baño*, la estructura de un sistema debe gritar *ventas*, *inventario*, *clientes*, no
 > *controllers*, *models*, *services*.
 
-## Estructura EJEMPLO AMOR EJEMPLOO ESTOY REALIZANDO UN CAMBIO AQUI
+## Estructura
 
 ```
 src/
