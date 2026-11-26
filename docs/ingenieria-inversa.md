@@ -68,7 +68,9 @@
   - Impacto en Booksy: Evitar scripts/estilos bloqueantes innecesarios y mantener un diseño estable desde la primera carga.
 
 - **Hallazgo 10 (Oportunidades y diagnosticos):**
-  - Evidencia: ![Lighthouse diagnosticos](<capturas/captura 10.jpg>)
+  - Evidencia: 
+  
+  ![Lighthouse diagnosticos](<capturas/captura 10.jpg>)
   - Observaciones: El peso de JavaScript, las tareas largas en el hilo principal y la falta de dimensiones explícitas en imágenes afectan la fluidez.
 
   - Impacto en Booksy: Escribir JavaScript limpio y modular para clon/, evitando tareas pesadas al calcular horarios o actualizar el estado de la reserva.
