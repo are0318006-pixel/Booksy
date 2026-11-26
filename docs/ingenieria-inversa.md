@@ -61,7 +61,9 @@
 
 ## 5. Lighthouse
 - **Hallazgo 9 (Puntajes y metricas clave):**
-  - Evidencia: ![Estado e interaccion](<capturas/captura 9.jpg>)
+  - Evidencia: 
+  
+  ![Estado e interaccion](<capturas/captura 9.jpg>)
     
   - Observaciones: Se evidencian cuellos de botella en carga inicial, fuentes, entrega de imágenes, caché y redistribuciones de diseño.
 
